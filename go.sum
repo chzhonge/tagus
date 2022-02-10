@@ -1,6 +1,8 @@
 github.com/0xAX/notificator v0.0.0-20210731104411-c42e3d4a43ee h1:LgokYDTCpaZBHtl/oGwLxNCr3kM5Qt+Z7mInv4MqFNM=
 github.com/0xAX/notificator v0.0.0-20210731104411-c42e3d4a43ee/go.mod h1:NtXa9WwQsukMHZpjNakTTz0LArxvGYdPA9CjIcUSZ6s=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/DATA-DOG/go-sqlmock v1.5.0 h1:Shsta01QNfFxHCfpW6YH2STWB0MudeXXEWMr20OEh60=
+github.com/DATA-DOG/go-sqlmock v1.5.0/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
 github.com/codegangsta/envy v0.0.0-20141216192214-4b78388c8ce4 h1:ihrIKrLQzm6Q6NJHBMemvaIGTFxgxQUEkn2AjN0Aulw=
 github.com/codegangsta/envy v0.0.0-20141216192214-4b78388c8ce4/go.mod h1:X7wHz0C25Lga6CnJ4WAQNbUQ9P/8eWSNv8qIO71YkSM=
 github.com/codegangsta/gin v0.0.0-20211113050330-71f90109db02 h1:PK8RQF5982bJELqOfaaTWs0kDqZzZGHxUTOpZWZm6fM=
