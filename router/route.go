@@ -10,6 +10,8 @@ func SetRouter() *gin.Engine {
 
 	r.GET("/ping", api.Pong)
 	r.GET("/check", api.HealthCheck)
+	r.POST("/signon", api.SignOn)
+	r.POST("/signin", api.SignIn)
 
 	return r
 }
