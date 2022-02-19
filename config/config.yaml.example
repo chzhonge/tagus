@@ -1,0 +1,8 @@
+---
+db:
+  type: sqlite
+  sqlite:
+    path: ./config/sqlite.db
+  mysql:
+    host: ""
+    password: ""
