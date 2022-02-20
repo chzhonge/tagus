@@ -9,8 +9,10 @@ import (
 	"gorm.io/gorm"
 	"net/http"
 	"strings"
+	"tagus/cache"
 	"tagus/model"
 	"tagus/repository"
+	"time"
 )
 
 type SignOnReq struct {
@@ -68,6 +70,9 @@ func SignIn(c *gin.Context) {
 
 	h := md5.New()
 	h.Write([]byte(strings.ToLower(u.Password)))
+	token := hex.EncodeToString(h.Sum(nil))
 
-	c.JSON(http.StatusOK, gin.H{"error": false, "data": gin.H{"token": hex.EncodeToString(h.Sum(nil))}})
+	cache.Manga.Set(token, u.ID, 10*time.Minute)
+
+	c.JSON(http.StatusOK, gin.H{"error": false, "data": gin.H{"token": token}})
 }
