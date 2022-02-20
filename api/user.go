@@ -54,7 +54,7 @@ func SignIn(c *gin.Context) {
 
 	var u model.User
 
-	err := model.DBConn.Select("password").Where(&model.User{UserName: r.User}).First(&u).Error
+	err := model.DBConn.Select("id", "password").Where(&model.User{UserName: r.User}).First(&u).Error
 
 	if errors.Is(err, gorm.ErrRecordNotFound) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "message": "user or password wrong1"})
