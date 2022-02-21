@@ -72,7 +72,7 @@ func SignIn(c *gin.Context) {
 	h.Write([]byte(strings.ToLower(u.Password)))
 	token := hex.EncodeToString(h.Sum(nil))
 
-	cache.Manga.Set(token, u.ID, 10*time.Minute)
+	cache.Manga.Set(token, u.ID, 6*time.Hour)
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "data": gin.H{"token": token}})
 }
